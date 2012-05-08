@@ -37,6 +37,6 @@
 		<input type="text" name="img_qty" id="img_qty" value="<?= count($gallery_qty) ?>" />
 		<input type="text" name="offset" value="1" />
 		<input type="button" id="next_img" value="Imagen siguiente" />
-		<input type="button" id="back_img" value="Imagen Anterior" /> lalal
+		<input type="button" id="back_img" value="Imagen Anterior" />
 	</form>	
 </div>
