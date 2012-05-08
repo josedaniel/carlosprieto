@@ -1,3 +1,4 @@
+<?php echo exec('whoami'); ?>
 <?php $output = shell_exec('git pull'); ?>
 <style>
 	body{
