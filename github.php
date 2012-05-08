@@ -1,5 +1,3 @@
-<?php echo exec('whoami'); ?>
-<?php $output = shell_exec('git pull'); ?>
 <style>
 	body{
 		background-color: #1A1A1A;
@@ -11,5 +9,5 @@
 	}
 </style>
 <body>
-	<pre><?= $output ?></pre>
+	<pre><?php echo exec('git pull'); ?></pre>
 </body>
