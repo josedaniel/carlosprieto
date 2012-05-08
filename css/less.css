@@ -544,9 +544,32 @@ body{
 			}
 			
 			.imagenes{
+				background-image:url('../img/widget_bottom_bg.png');
+				background-repeat: no-repeat;
+				background-position:bottom;
+
+				#link_show_images{
+					display: block;
+					text-align:center;
+					float: left;
+					color: #655745;
+					padding:10px 0 10px 0;
+					font-family: 'Vollkorn', serif;
+					text-decoration:none;
+					width:100%;
+					font-size:16px;
+					
+					&:hover{
+						color: #655745;
+						text-decoration:underline;
+					}
+				}
+
+
 				.img_container{
 					width:330px;
 					float:left;
+					margin-left:3px;
 					
 					.img_top{
 						float:left;

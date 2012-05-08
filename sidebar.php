@@ -16,7 +16,13 @@
 
 
 <?php
-	$images_args = array('category' => 4262, 'post_status' => 'publish');
+	if($_SERVER['HTTP_HOST'] == 'carlosprieto.josepaternina.dev'){
+		$gallery_cat = 6;	
+	}else{
+		$gallery_cat = 4262;
+	}
+
+	$images_args = array('category' => $gallery_cat, 'post_status' => 'publish');
 	$gallery_qty = get_posts($images_args);
 	$src =  wp_get_attachment_image_src(get_post_thumbnail_id($gallery_qty[0]->ID));
 ?>
@@ -33,10 +39,5 @@
 			<img src="http://carlosprieto.net/wp-content/themes/carlosprieto/img/galeria_bottom_bg.png" />
 		</div>
 	</div>
-	<form id="galery_form">
-		<input type="text" name="img_qty" id="img_qty" value="<?= count($gallery_qty) ?>" />
-		<input type="text" name="offset" value="1" />
-		<input type="button" id="next_img" value="Imagen siguiente" />
-		<input type="button" id="back_img" value="Imagen Anterior" />
-	</form>	
+	<a href="#show_images" id="link_show_images">Ver las otras <?= count($gallery_qty) - 1 ?> imágenes.</a>	
 </div>

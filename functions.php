@@ -1,4 +1,5 @@
 <?php
+
 	add_theme_support( 'post-thumbnails' );
 
 	if(function_exists('register_sidebar')){
@@ -29,6 +30,12 @@
 	add_action('wp_ajax_gallery_image', 'gallery_image_callback'); 
 
 	function gallery_image_callback(){
+		if($_SERVER['HTTP_HOST'] == 'carlosprieto.josepaternina.dev'){
+			$gallery_cat = 6;	
+		}else{
+			$gallery_cat = 4262;
+		}
+
 		$event 	= $_POST['event'];
 		$offset = $_POST['offset'];
 		
@@ -36,7 +43,7 @@
 		$args = array(
 			'numberposts'     => 1,
 			'offset'		  => $offset,
-			'category'		  => 4262,
+			'category'		  => $gallery_cat,
 			'order_by'		  => 'post_date',
 			'order'           => 'DSC',
 			'post_type'       => 'post',

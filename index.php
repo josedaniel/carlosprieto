@@ -1,3 +1,10 @@
+<?php
+if($_SERVER['HTTP_HOST'] == 'carlosprieto.josepaternina.dev'){
+	$gallery_cat = 6;	
+}else{
+	$gallery_cat = 4262;
+}
+?>
 <?php get_header(); ?>
 	<div class="content">
 		<div class="featured_posts">
@@ -33,7 +40,7 @@
 		
 		<div style="width:1000px;margin: 25px auto 0 auto;">
 			<div class="posts" id="posts">
-				<?php query_posts($query_string . '&cat=-4262'); ?>
+				<?php query_posts($query_string . '&cat=-'.$gallery_cat); ?>
 				<?php if ( have_posts() ) { ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<div class="this_post">
