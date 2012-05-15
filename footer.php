@@ -3,6 +3,33 @@
 		</div>
 	</div>  
 	
+	<!-- GALLERY LB -->
+	<div id="gallery_lb">
+		<div class="close"><!-- --></div>
+		<div class="lb_content">
+			<div class="loading">
+				Cargando...
+			</div>
+			<div class="image_container">
+				<div class="title">
+					<h3>Titulo de la foto</h3>
+				</div>
+				<div class="foto">
+					<img class="the_image" src="http://carlosprieto.josepaternina.dev/wp-content/uploads/2011/05/Berge-II-by-Simon-Schlegl.jpg" />
+					<div class="back arrow">
+						<img src="/wp-content/themes/carlosprieto/img/l.png" />
+					</div>
+					<div class="next arrow">
+						<img src="/wp-content/themes/carlosprieto/img/r.png" />
+					</div>
+				</div>
+				<div class="description">
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/js/libs/jquery-1.7.1.min.js"><\/script>')</script>

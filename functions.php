@@ -34,15 +34,9 @@
 			$gallery_cat = 6;	
 		}else{
 			$gallery_cat = 4262;
-		}
-
-		$event 	= $_POST['event'];
-		$offset = $_POST['offset'];
-		
+		}		
 		
 		$args = array(
-			'numberposts'     => 1,
-			'offset'		  => $offset,
 			'category'		  => $gallery_cat,
 			'order_by'		  => 'post_date',
 			'order'           => 'DSC',
@@ -50,10 +44,21 @@
 			'post_status'     => 'publish' 
 		);
 		
-		$image = get_posts($args);
-		
-		$data = $_POST;
-		echo json_encode($data);
+		$posts = get_posts($args);
+		$images = array();
+
+		foreach ($posts as $post) {
+			$src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'full');
+			$this_image = array(
+				'image_id'			=> $post->ID,
+				'image_src'			=> $src[0],
+				'image_title'		=> $post->post_title,
+				'image_description'	=> get_post_meta($post->ID, 'subtitulo', $single = true)
+			);
+			array_push($images, $this_image);
+		}
+
+		echo json_encode($images);
 		die();
 	}
 ?>

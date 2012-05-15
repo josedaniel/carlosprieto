@@ -22,9 +22,9 @@
 		$gallery_cat = 4262;
 	}
 
-	$images_args = array('category' => $gallery_cat, 'post_status' => 'publish');
+	$images_args = array('category' => $gallery_cat, 'post_status' => 'publish', 'orderby'=>'rand');
 	$gallery_qty = get_posts($images_args);
-	$src =  wp_get_attachment_image_src(get_post_thumbnail_id($gallery_qty[0]->ID));
+	$src =  wp_get_attachment_image_src(get_post_thumbnail_id($gallery_qty[0]->ID),'full');
 ?>
 <div class="widget imagenes">
 	<h4>Galería de Imágenes</h4>
