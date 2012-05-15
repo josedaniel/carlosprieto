@@ -87,6 +87,8 @@ $(document).ready(function(){
 
 	$('#gallery_lb .close').click(function(e){
 		e.preventDefault();
+		$('.lb_content .image_container').hide();
+		$('.lb_content .loading').show();
 		$('#gallery_lb').hide();
 	});
 
