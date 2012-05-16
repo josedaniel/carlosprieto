@@ -3,7 +3,7 @@
 }
 
 .jcarousel-skin-laundry .jcarousel-direction-rtl {
-	direction: rtl;
+    direction: rtl;
 }
 
 .jcarousel-skin-laundry .jcarousel-container-horizontal {
@@ -23,6 +23,16 @@
 
 .jcarousel-list-horizontal{}
 
+.jcarousel-skin-laundry .jcarousel-item img{
+    opacity:0.7;
+   -moz-opacity: 0.7;
+    filter:alpha(opacity=7);       
+}
+.jcarousel-skin-laundry .jcarousel-item:hover img{
+    opacity:1;
+   -moz-opacity: 1;
+    filter:alpha(opacity=1);   
+}
 
 .jcarousel-skin-laundry .jcarousel-item:nth-child(even) {
     width: 165px;
@@ -52,9 +62,9 @@
 }
 
 .jcarousel-item .img_container img{
-	width:133px;
-	max-height:82px;
-	border:1px solid #999;
+    width:133px;
+    max-height:82px;
+    border:1px solid #999;
 }
 
 .jcarousel-item .link{
@@ -132,7 +142,7 @@
     width: 45px;
     height: 40px;
     cursor: pointer;
-    background: transparent url(../../img/carousel_back.png) no-repeat 0 0;
+    background: transparent url('../../img/carousel_back.png') no-repeat 0 0;
 }
 
 .jcarousel-skin-laundry .jcarousel-direction-rtl .jcarousel-prev-horizontal {

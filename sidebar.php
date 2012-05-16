@@ -11,10 +11,6 @@
 	</form>
 </div>
 
-<?php dynamic_sidebar('right-sidebar'); ?>
-
-
-
 <?php
 	if($_SERVER['HTTP_HOST'] == 'carlosprieto.josepaternina.dev'){
 		$gallery_cat = 6;	
@@ -41,3 +37,5 @@
 	</div>
 	<a href="#show_images" id="link_show_images">Ver las otras <?= count($gallery_qty) - 1 ?> imágenes.</a>	
 </div>
+
+<?php dynamic_sidebar('right-sidebar'); ?>
