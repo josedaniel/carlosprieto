@@ -7,26 +7,27 @@
 	<div id="gallery_lb">
 		<div class="close"><!-- --></div>
 		<div class="lb_content">
-			<div class="loading">
-				Cargando...
-			</div>
-			<div class="image_container">
-				<div class="title">
-					<h3>Titulo de la foto</h3>
-				</div>
-				<div class="foto">
-					<img class="the_image" src="http://carlosprieto.josepaternina.dev/wp-content/uploads/2011/05/Berge-II-by-Simon-Schlegl.jpg" />
-					<div class="back arrow">
-						<img src="/wp-content/themes/carlosprieto/img/l.png" />
-					</div>
-					<div class="next arrow">
-						<img src="/wp-content/themes/carlosprieto/img/r.png" />
-					</div>
-				</div>
-				<div class="description">
-					<p></p>
-				</div>
-			</div>
+
+			<table>
+				<tr>
+					<td class="arrow_container">
+						<a href="#" class="arrow back"><img src="/wp-content/themes/carlosprieto/img/l.png" /></a>
+					</td>
+					<td class="img_container loading" id="img_container">
+						
+					</td>
+					<td class="arrow_container">
+						<a href="#" class="arrow next"><img src="/wp-content/themes/carlosprieto/img/r.png" /></a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" class="description">
+						<h3></h3>
+						<p></p>
+					</td>
+				</tr>
+			</table>
+
 		</div>
 	</div>
 	
