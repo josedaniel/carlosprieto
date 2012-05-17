@@ -11,7 +11,7 @@
 		}
 	?>
 	<form method="get" role="search" id="searchform" action="http://carlosprieto.net">
-		<input type="text" name="s" id="s" <?= $value; ?> />
+		<input type="text" name="s" id="s" <?= $value; ?> placeholder="Buscar..." />
 	</form>
 </div>
 
