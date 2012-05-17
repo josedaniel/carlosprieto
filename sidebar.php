@@ -44,7 +44,7 @@
 			<img src="http://carlosprieto.net/wp-content/themes/carlosprieto/img/galeria_bottom_bg.png" />
 		</div>
 	</div>
-	<a href="#show_images" id="link_show_images">Ver las otras <?= count($gallery_qty) - 1 ?> imágenes.</a>	
+	<a href="#show_images" id="link_show_images">Ver todas las <?= count($gallery_qty) ?> imágenes.</a>	
 </div>
 
 <?php 
