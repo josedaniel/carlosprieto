@@ -71,7 +71,7 @@
 
 <div class="widget videos">
 	<h4>Vídeos Destacados</h4>
-	<iframe width="334" height="251" src="http://www.youtube.com/embed/videoseries?list=FLEgEFTUBn1RfIoebgG1IYeA&amp;hl=es_ES" frameborder="0" allowfullscreen></iframe>
+	<iframe width="334" height="251" src="http://www.youtube.com/embed/videoseries?list=FLEgEFTUBn1RfIoebgG1IYeA&amp;hl=es_ES&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
 	<a href="http://www.youtube.com/playlist?list=FLEgEFTUBn1RfIoebgG1IYeA&feature=plcp" target="_blank">Ver la lista completa en YouTube</a>
 </div>
 
