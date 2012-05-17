@@ -38,13 +38,13 @@
 			<img src="http://carlosprieto.net/wp-content/themes/carlosprieto/img/galeria_top_bg_a.png" />
 		</div>
 		<div class="img_placeholder">
-			<img src="<?php bloginfo('stylesheet_directory'); ?>/timthumb.php?src=<?= $src[0] ?>&amp;w=311" />
+			<img id="img_show_images" src="<?php bloginfo('stylesheet_directory'); ?>/timthumb.php?src=<?= $src[0] ?>&amp;w=311" />
 		</div>
 		<div class="img_bottom">
 			<img src="http://carlosprieto.net/wp-content/themes/carlosprieto/img/galeria_bottom_bg.png" />
 		</div>
 	</div>
-	<a href="#show_images" id="link_show_images">Ver todas las <?= count($gallery_qty) ?> imágenes.</a>	
+	<a href="#show_images" id="link_show_images">Ver todas las imágenes (<?= count($gallery_qty) ?> en total).</a>	
 </div>
 
 <?php 
