@@ -76,7 +76,10 @@
 </div>
 
 
-
+<div class="widget musica">
+	<h4>Pocho Stereo</h4>
+	<object width="335" height="450" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsPlaylist3453718386" name="gsPlaylist3453718386"><param name="movie" value="http://grooveshark.com/widget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=cowbell.grooveshark.com&playlistID=34537183&bbg=ede6d8&bth=ede6d8&pfg=ede6d8&lfg=ede6d8&bt=665845&pbg=665845&pfgh=665845&si=665845&lbg=665845&lfgh=665845&sb=665845&bfg=ffffff&pbgh=ffffff&lbgh=ffffff&sbh=ffffff&p=0" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/widget.swf" width="335" height="450"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=cowbell.grooveshark.com&playlistID=34537183&bbg=ede6d8&bth=ede6d8&pfg=ede6d8&lfg=ede6d8&bt=665845&pbg=665845&pfgh=665845&si=665845&lbg=665845&lfgh=665845&sb=665845&bfg=ffffff&pbgh=ffffff&lbgh=ffffff&sbh=ffffff&p=0" /><span><a href="http://grooveshark.com/playlist/Caetanear/34537183" title="Caetanear by José Daniel Paternina Soto on Grooveshark">Caetanear by José Daniel Paternina Soto on Grooveshark</a></span></object></object>
+</div>
 
 <?php 
 	/*DYNAMIC SIDEBAR
