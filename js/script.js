@@ -59,6 +59,11 @@ $(document).ready(function(){
 	//GALERIA DE IMAGENES
 	$('#link_show_images').click(function(e){
 		e.preventDefault();
+		$('#img_container').empty();
+		$('.lb_content .description h3').empty();
+		$('.lb_content .description p').empty();
+
+
 		$('#gallery_lb').show();
 		var data = {action :'gallery_image'};
 		

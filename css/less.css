@@ -609,6 +609,23 @@ body{
 				
 				
 			}
+
+			.frase blockquote{
+				margin:0;
+				padding: 0 10px 20px 10px;
+				float: left;
+				background-image:url('../img/widget_bottom_bg.png');
+				background-position:bottom center;
+				background-repeat: no-repeat;
+
+				.frase{
+					font-style:italic;
+					font-family:serif;
+					font-size:18px;
+				}
+
+				.autor{}
+			}
 			
 			.widget_recent_entries, .widget_most_commented_widget{
 				p{

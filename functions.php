@@ -61,4 +61,91 @@
 		echo json_encode($images);
 		die();
 	}
+
+
+	/*
+	*  CUSTOM POST TYPE: FRASE DEL DIA
+	*  **********************************************************************************
+	*/
+	//FUNCION PARA INICIALIZAR EL CPT
+	function init_frase() {
+		
+		$labels = array(
+			'name' 					=> _x('Frases', 'post type general name'),
+			'singular_name' 		=> _x('Frase', 'post type singular name'),
+			'add_new' 				=> _x('Agregar', 'Frase'),
+			'add_new_item' 			=> __('Agregar nueva Frase'),
+			'edit_item' 			=> __('Editar Frase'),
+			'new_item' 				=> __('Nueva Frase'),
+			'all_items' 			=> __('Todas las Frases'),
+			'view_item' 			=> __('Ver Frase'),
+			'search_items' 			=> __('Buscar Frases'),
+			'not_found' 			=>  __('No se encontraron Frases'),
+			'not_found_in_trash' 	=> __('No se encontraron Frases en la papelera'), 
+			'parent_item_colon' 	=> '',
+			'menu_name' 			=> 'Frases del Día'
+		);
+
+		$args = array(
+			'labels' 				=> $labels,
+			'public' 				=> true,
+			'publicly_queryable' 	=> true,
+			'show_ui' 				=> true, 
+			'show_in_menu' 			=> true, 
+			'query_var' 			=> true,
+			'rewrite' 				=> true,
+			'capability_type' 		=> 'post',
+			'has_archive' 			=> true, 
+			'hierarchical' 			=> false,
+			'menu_position' 		=> null,
+			'supports' 				=> array('revisions','title')
+		); 
+
+		register_post_type( 'frase', $args );
+	}
+
+
+	//FUNCION PARA ENSAMBLAR EL METABOX DE LA ADMINISTRACION
+	function frase_custom_metabox(){
+		global $post;
+		$frasecontenido = get_post_meta( $post->ID, 'frasecontenido', true );
+		$fraseautor 	= get_post_meta( $post->ID, 'fraseautor', true );
+		//form
+		?>
+			<p>
+				<label for="fraseautor">Autor:<br /></label>
+				<input style="width:100%;" type="text" id="fraseautor" name="fraseautor" value="<?php if($fraseautor){ echo $fraseautor; } ?>" />
+				
+			</p>
+			<p>
+				<label for="frasecontenido">Contenido:</label><br />
+				<textarea style="width:100%" rows="7" id="frasecontenido" name="frasecontenido"><?php if($frasecontenido){ echo $frasecontenido; } ?></textarea>
+			</p>
+		<?php
+		//form end
+	}
+
+	//FUNCION PARA ACTUALIZAR LOS VALORES
+	function save_custom_frase( $post_id ) {
+		global $post;	
+
+		if($_POST){
+			update_post_meta( $post->ID, 'frasecontenido', $_POST['frasecontenido'] );
+			update_post_meta( $post->ID, 'fraseautor', $_POST['fraseautor'] );
+		}
+	}
+
+	//FUNCIONA PARA AGREGAR EL METABOX A LA ADMINISTRACION DE FRASES
+	function add_frase_metabox() {
+		add_meta_box( 'frase-metabox', __( 'Información de la Frase' ), 'frase_custom_metabox', 'frase', 'normal', 'high' );
+	}
+
+	add_action( 'init', 'init_frase');
+	add_action( 'admin_init', 'add_frase_metabox' );
+	add_action( 'save_post', 'save_custom_frase' );
+
+	/*
+	*  FINAL FRASE DEL DIA
+	*  **********************************************************************************
+	*/
 ?>
