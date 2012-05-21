@@ -148,5 +148,15 @@ $(document).ready(function(){
 			
 		}
 	});
+
+
+	//WIDGET DE AUTORES
+	$('.autores_widget .navegacion a').click(function(e){
+		e.preventDefault();
+		var autor = $(this).attr('id');
+		$('.autores_widget .contenido h4').html('Posts de '+$(this).html());
+		var data = {'action': 'posts_autor','id_autor': autor};
+		$('.autores_widget .contenido ul').load('/wp-admin/admin-ajax.php',data);
+	});
 		
 });

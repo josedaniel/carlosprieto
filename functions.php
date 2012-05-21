@@ -62,6 +62,60 @@
 		die();
 	}
 
+	//AJAX - LISTAR TODOS LOS POSTS DE UN AUTOR
+	add_action('wp_ajax_posts_autor', 'posts_autor_callback');
+	
+	function posts_autor_callback(){
+		if($_SERVER['HTTP_HOST'] == 'carlosprieto.josepaternina.dev'){
+			$gallery_cat = 6;	
+		}else{
+			$gallery_cat = 4262;
+		}
+
+		$id_autor = $_POST['id_autor'];
+		$args = array(
+			'numberposts'     => 30,
+			'author'		  => $id_autor,
+			'order_by'		  => 'post_date',
+			'order'           => 'DSC',
+			'post_type'       => 'post',
+			'post_status'     => 'publish',
+			'category'		  => '-'.$gallery_cat 
+		);
+		$posts = get_posts($args);
+		foreach($posts as $post){
+			setup_postdata($post);
+			?>
+				<li>
+					<table>
+						<tr>
+							<td>
+								<?php 
+									$img = get_post_meta($post->ID, 'screen', $single = true);
+									if($img == ''){
+										$img = 'http://placehold.it/87x71/4D4131/ffffff/&text=...';
+									}else{
+										$img = 'http://carlosprieto.net/wp-content/themes/carlosprieto/timthumb.php?src='.$img.'&amp;h=71&amp;w=87';
+									} 
+								?>
+								<img src="<?= $img ?>">
+							</td>
+							<td>
+								<p class="resumen">
+									<a href="<?= $post->guid ?>"><?= $post->post_title?></a>: <?php the_excerpt(); ?>
+								</p>
+								<p class="link">
+									<a href="<?= $post->guid ?>">Ver más</a>
+								</p>
+							</td>
+						</tr>
+					</table>
+				</li>
+			<?php
+		}
+		die();
+	} 
+
 
 	/*
 	*  CUSTOM POST TYPE: FRASE DEL DIA

@@ -93,6 +93,37 @@ if($_SERVER['HTTP_HOST'] == 'carlosprieto.josepaternina.dev'){
 					<?php } ?>
 					</div>
 				<?php } ?>
+			
+				<div class="autores_widget">
+					<h3>Listado de entradas por Autor</h3>
+					<div class="autores_container">
+						<div class="navegacion">
+							<h4>Autores</h4>
+							<ul>
+								<?php 
+									$autores_args = array(
+										'blog_id' 	=> $GLOBALS['blog_id'],
+										'orderby' 	=> 'nicename',
+										'order'		=> 'DESC',
+										'who'		=> 'authors'
+									);
+
+									$autores = get_users($autores_args);
+
+									foreach ($autores as $autor) {
+										?><li><a href="#<?= $autor->user_nicename ?>" id="<?= $autor->ID ?>"><?= $autor->display_name ?></a></li><?php
+									}
+								?>
+							</ul>
+						</div>
+						<div class="contenido">
+							<h4>Seleccione un autor...</h4>
+							<ul>
+								<!-- ajax -->
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="sidebar">
 				<?php get_sidebar(); ?>
