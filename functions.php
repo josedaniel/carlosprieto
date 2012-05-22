@@ -20,8 +20,7 @@
     function registrar_menus() {
         register_nav_menus(array(
         	'menu-izquierda' 	=> __( 'Menu Superior Izquierdo' ), 
-        	'menu-derecha' 		=> __( 'Menu Superior Derecho' ),
-        	'menu-inferior' 	=> __( 'Menu Inferior' )
+        	'menu-derecha' 		=> __( 'Menu Superior Derecho' )
         ));
     }
     add_action('init', 'registrar_menus');

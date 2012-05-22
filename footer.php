@@ -41,9 +41,28 @@
 					</div>
 					<div class="widget navegacion">
 						<h4>Carlosprieto.net</h4>
-						<?php wp_nav_menu(array('theme_location' => 'menu-inferior')); ?>
+						<ul>
+							<li><a href="/">Inicio</a></li>
+							<li><a href="http://carlosprieto.net/index.php/category/cine/">Cine</a></li>
+							<li><a href="http://carlosprieto.net/index.php/category/entrevistas/">Entrevistas</a></li>
+							<li><a href="http://carlosprieto.net/index.php/category/fotos/">Fotos</a></li>
+
+							<li><a href="http://carlosprieto.net/index.php/category/multimedia/">Video</a></li>
+							<li><a href="http://carlosprieto.net/index.php/category/noticias/">Noticias</a></li>
+							<li><a href="http://carlosprieto.net/index.php/category/libros/">Libros</a></li>
+							<li><a href="http://carlosprieto.net/index.php/category/gastronomia/">Gastronomía</a></li>
+						</ul>
 					</div>
 				</div>
+				<div class="creditos">
+					<div class="left">2012 - Carlos Alfonso Prieto</div>
+					<div class="right">Diseño: Daniel 8a - Programación: Desarrollo 22</div>
+				</div>
+			</div>
+			<div class="subir">
+				<a href="#wrapper">
+					<img src="/wp-content/themes/carlosprieto/img/subir.png" />
+				</a>
 			</div>
 		</div>
 	</div>  
