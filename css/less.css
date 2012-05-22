@@ -864,6 +864,8 @@ body{
 				width:200px - 20;
 				height:410px;
 				float: left;
+				overflow-y:scroll;
+				overflow-x:hidden;
 
 				li{
 					float: left;
