@@ -50,6 +50,7 @@ if($_SERVER['HTTP_HOST'] == 'carlosprieto.josepaternina.dev'){
 									<li><a href="" class="author">Publicado por <?php the_author(); ?></a></li>
 									<li><a href="" class="date"><?php the_date() ?> </a></li>
 									<li><a href="<?php the_permalink(); ?>#comentarios" class="comments">Agregar comentarios</a></li>
+									<li><?php edit_post_link('EDITAR'); ?></li>
 								</ul>
 							</div>
 							<?php 
