@@ -814,16 +814,14 @@ body{
 	h3{
 		margin-top:50px;
 		color: #655745;
-		font-size:30px;
-		font-family: 'Vollkorn', serif;
-		letter-spacing: 0;
-		text-shadow:0 0 1px transparent;
+		font-size:16px;
+		font-family: sans-serif;
 		text-transform:uppercase;
 		padding-bottom:10px;
 		background-image:url('../img/post_tagline.png');
 		background-repeat:no-repeat;
 		background-position:bottom center;
-		text-align:center;
+		text-align:left;
 	}
 
 	.autores_container{
