@@ -158,5 +158,7 @@ $(document).ready(function(){
 		var data = {'action': 'posts_autor','id_autor': autor};
 		$('.autores_widget .contenido ul').load('/wp-admin/admin-ajax.php',data);
 	});
+
+	$('.autores_widget #3').trigger('click');
 		
 });
