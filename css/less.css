@@ -91,6 +91,13 @@ body{
 						text-decoration:none;
 					}
 					
+					.boton_inicio{
+						background-color: #655745;
+						a{
+							color:#fff;
+						}
+					}
+
 					li{
 						float:left;
 						height:50px;
