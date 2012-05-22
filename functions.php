@@ -17,10 +17,14 @@
     
     
     //REGISTRAR MENUS
-    add_action('init', 'registrar_menus');
     function registrar_menus() {
-        register_nav_menus(array('menu-izquierda' => __( 'Menu Superior Izquierdo' ), 'menu-derecha' => __( 'Menu Superior Derecho' )));
+        register_nav_menus(array(
+        	'menu-izquierda' 	=> __( 'Menu Superior Izquierdo' ), 
+        	'menu-derecha' 		=> __( 'Menu Superior Derecho' ),
+        	'menu-inferior' 	=> __( 'Menu Inferior' )
+        ));
     }
+    add_action('init', 'registrar_menus');
 	
 	//PERMITIR SHORTCODES EN LOS WIDGETS DE TEXTO
 	add_filter('widget_text', 'do_shortcode');

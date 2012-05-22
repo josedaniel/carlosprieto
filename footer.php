@@ -1,5 +1,50 @@
 		<div class="footer">
-		
+			<div style="width:1000px;margin:0 auto">
+				<div class="bottombar">
+					<div class="twitter">
+						<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+						<script>
+						new TWTR.Widget({
+						  version: 2,
+						  type: 'profile',
+						  rpp: 5,
+						  interval: 30000,
+						  width: 320,
+						  height: 430,
+						  theme: {
+						    shell: {
+						      background: '#504639',
+						      color: '#ffffff'
+						    },
+						    tweets: {
+						      background: '#504639',
+						      color: '#ffffff',
+						      links: '#ece5d7'
+						    }
+						  },
+						  features: {
+						    scrollbar: false,
+						    loop: false,
+						    live: false,
+						    behavior: 'all'
+						  }
+						}).render().setUser('carlosprieto').start();
+						</script>	
+					</div>
+					<div class="widget disclaimer">
+						<h4>Disclaimer</h4>
+						<p>
+							Todo el contenido publicado en este blog es 
+							propiedad de sus autores, y no necesariamente 
+							refleja la opinón del editor de este sitio web.
+						</p>
+					</div>
+					<div class="widget navegacion">
+						<h4>Carlosprieto.net</h4>
+						<?php wp_nav_menu(array('theme_location' => 'menu-inferior')); ?>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>  
 	
