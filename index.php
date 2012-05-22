@@ -104,7 +104,7 @@ if($_SERVER['HTTP_HOST'] == 'carlosprieto.josepaternina.dev'){
 								<?php 
 									$autores_args = array(
 										'blog_id' 	=> $GLOBALS['blog_id'],
-										'orderby' 	=> 'username',
+										'orderby' 	=> 'email',
 										'order'		=> 'DESC',
 										'who'		=> 'authors'
 									);
