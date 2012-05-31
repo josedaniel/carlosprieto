@@ -165,8 +165,8 @@
 	//FUNCION PARA ENSAMBLAR EL METABOX DE LA ADMINISTRACION
 	function frase_custom_metabox(){
 		global $post;
-		$frasecontenido = get_post_meta( $post->ID, 'frasecontenido', true );
-		$fraseautor 	= get_post_meta( $post->ID, 'fraseautor', true );
+		$frasecontenido = get_post_meta( wp_is_post_revision($post->ID), 'frasecontenido', true );
+		$fraseautor 	= get_post_meta( wp_is_post_revision($post->ID), 'fraseautor', true );
 		//form
 		?>
 			<p>
@@ -187,8 +187,8 @@
 		global $post;	
 
 		if($_POST){
-			update_post_meta( wp_is_post_revision($post->ID), 'frasecontenido', $_POST['frasecontenido'] );
-			update_post_meta( wp_is_post_revision($post->ID), 'fraseautor', $_POST['fraseautor'] );
+			update_post_meta($post->ID, 'frasecontenido', $_POST['frasecontenido'] );
+			update_post_meta( $post->ID, 'fraseautor', $_POST['fraseautor'] );
 		}
 	}
 
