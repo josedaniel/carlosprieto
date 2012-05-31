@@ -47,7 +47,7 @@ if($_SERVER['HTTP_HOST'] == 'carlosprieto.josepaternina.dev'){
 							<h2 class="post_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<div class="post_info">
 								<ul>
-									<li><a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>" class="author">Publicado por <?php the_author(); ?></a></li>
+									<li><a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>" class="author">Por: <?php the_author(); ?></a></li>
 									<li><a href="#" class="date"><?php the_date() ?></a></li>
 									<li><a href="<?php the_permalink(); ?>#comentarios" class="comments">Agregar comentarios</a></li>
 									<li><?php edit_post_link('EDITAR'); ?></li>
