@@ -14,7 +14,7 @@
   <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/laundry/skin.css">
-  <link rel="stylesheet/less" href="<?php bloginfo('template_url'); ?>/css/less.css">
+  <!--<link rel="stylesheet/less" href="<?php bloginfo('template_url'); ?>/css/less.css">-->
 
   <script src="<?php bloginfo('template_url'); ?>/js/libs/modernizr-2.5.3.min.js"></script>
   <script charset="utf-8" type="text/javascript">

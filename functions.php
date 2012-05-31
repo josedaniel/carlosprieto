@@ -171,12 +171,12 @@
 		?>
 			<p>
 				<label for="fraseautor">Autor:<br /></label>
-				<input style="width:100%;" type="text" id="fraseautor" name="fraseautor" value="<?php if($fraseautor){ echo $fraseautor; } ?>" />
+				<input style="width:100%;" type="text" id="fraseautor" name="fraseautor" value="<?php if($fraseautor){echo $fraseautor;} ?>" />
 				
 			</p>
 			<p>
 				<label for="frasecontenido">Contenido:</label><br />
-				<textarea style="width:100%" rows="7" id="frasecontenido" name="frasecontenido"><?php if($frasecontenido){ echo $frasecontenido; } ?></textarea>
+				<textarea style="width:100%" rows="7" id="frasecontenido" name="frasecontenido"><?php if($frasecontenido){echo $frasecontenido;} ?></textarea>
 			</p>
 		<?php
 		//form end
@@ -187,8 +187,8 @@
 		global $post;	
 
 		if($_POST){
-			update_post_meta( $post->ID, 'frasecontenido', $_POST['frasecontenido'] );
-			update_post_meta( $post->ID, 'fraseautor', $_POST['fraseautor'] );
+			update_post_meta( wp_is_post_revision($post->ID), 'frasecontenido', $_POST['frasecontenido'] );
+			update_post_meta( wp_is_post_revision($post->ID), 'fraseautor', $_POST['fraseautor'] );
 		}
 	}
 

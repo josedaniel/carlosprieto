@@ -99,7 +99,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 	
-	<script src="<?php bloginfo('template_url'); ?>/js/less-1.3.0.min.js"></script>
+	<!--<script src="<?php bloginfo('template_url'); ?>/js/less-1.3.0.min.js"></script>-->
 	<script src="<?php bloginfo('template_url'); ?>/js/jquery.jcarousel.min.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/plugins.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/script.js"></script>

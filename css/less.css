@@ -2,6 +2,7 @@ body{
 	background-color:#EDE5D8;
 	background-image:url('../img/body_bkg.png');
 	background-repeat:repeat;
+	background-attachment:fixed;
 	padding:0;
 	margin:0;
 	
@@ -388,7 +389,12 @@ body{
 							.author{
 								padding-left:28px;
 								background-image:url('../img/post_autor.png');
-								background-repeat:no-repeat;
+								background-repeat:no-repeat;								
+								color:#000;
+								&:hover{
+									color: #333;
+								}
+								
 							}
 							
 							.date{
@@ -459,11 +465,11 @@ body{
 					}
 					
 					a{
-						color:#000;
+						color:#444;
 						text-decoration:underline;
 						
 						&:hover{
-							color:#444;
+							color:#666;
 							text-decoration:underline;
 						}
 					}
@@ -520,7 +526,7 @@ body{
 				
 				h4{
 					display:block;
-					width:320px;
+					width:321px;
 					float:left;
 					height:41px;
 					color:#ECE5D7;
@@ -531,7 +537,8 @@ body{
 					text-shadow:0 0 1px transparent;
 					text-transform:uppercase;
 					font-size:18px;
-					padding:2px 0 0 15px;
+					padding:2px 7px 0 7px;
+					text-align: center;
 				}
 			}
 			
