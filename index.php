@@ -40,6 +40,13 @@ if($_SERVER['HTTP_HOST'] == 'carlosprieto.josepaternina.dev'){
 		
 		<div style="width:1000px;margin: 25px auto 0 auto;">
 			<div class="posts" id="posts">
+				<?php if(isset($_GET['s'])){ ?>
+					<div style="width:100%;float:left;margin-bottom:20px;">
+						<p>
+							<em>Resultados de la búsqueda para '<?= $_GET['s'] ?>':</em>
+						</p>
+					</div>
+				<?php } ?>
 				<?php query_posts($query_string . '&cat=-'.$gallery_cat); ?>
 				<?php if ( have_posts() ) { ?>
 					<?php while ( have_posts() ) : the_post(); ?>
