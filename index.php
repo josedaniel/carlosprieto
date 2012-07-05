@@ -41,9 +41,9 @@ if($_SERVER['HTTP_HOST'] == 'carlosprieto.josepaternina.dev'){
 		<div style="width:1000px;margin: 25px auto 0 auto;">
 			<div class="posts" id="posts">
 				<?php if(isset($_GET['s'])){ ?>
-					<div style="width:100%;float:left;margin-bottom:20px;">
+					<div style="width:100%;float:left;margin-bottom:20px;border-top: 1px solid #B7AC9C;border-bottom: 1px solid #B7AC9C;text-align: center;">
 						<p>
-							<em>Resultados de la búsqueda para '<?= $_GET['s'] ?>':</em>
+							<em>Resultados de la búsqueda para 'test':</em>
 						</p>
 					</div>
 				<?php } ?>
