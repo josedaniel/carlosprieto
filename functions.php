@@ -7,7 +7,18 @@
 		register_sidebar(array(
 		  'name' 			=> 'Lateral Derecho',
 		  'id' 				=> 'right-sidebar',
-		  'description' 	=> 'Widgets en esta area se mostraran en la parte derecha.',
+		  'description' 	=> 'Widgets en esta area se mostraran en la parte superior derecha.',
+		  'before_widget' 	=> '<div class="widget %2$s">',
+		  'after_widget' 	=> '</div>',
+		  'before_title' 	=> '<h4>',
+		  'after_title' 	=> '</h4>'
+		));
+
+		//REGISTRAR EL SIDEBAR INFERIOR
+		register_sidebar(array(
+		  'name' 			=> 'Inferior Derecho',
+		  'id' 				=> 'bottom-sidebar',
+		  'description' 	=> 'Widgets en esta area se mostraran en la parte inferior derecha.',
 		  'before_widget' 	=> '<div class="widget %2$s">',
 		  'after_widget' 	=> '</div>',
 		  'before_title' 	=> '<h4>',

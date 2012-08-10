@@ -111,3 +111,9 @@
 ?>
 	</ul>
 </div>
+
+<?php 
+	/*DYNAMIC SIDEBAR
+	 ***********************************************************/ 
+	 dynamic_sidebar('bottom-sidebar'); 
+?>
